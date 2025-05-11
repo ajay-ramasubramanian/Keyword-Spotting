@@ -35,3 +35,54 @@ The Goal of the Project is to evaluate the performance of discrete audio represe
 To do that I will be , designing a system that works well with discrete audio features. I will be considering **EncoDec** features which are implemented in **speechbrain**. On top of that, I will device an architecture that achieves the best performance.
 
 I will be comparing different types of neural networks, such as RNNs, Transformers, CNNs, MLPs, etc. Finally the performance of the system using discrete audio representation is compared with that achieved by standard features and by popular self-supervised models such as **Wav2vec, Hubert, and WavLM**.  
+
+## Key Components
+
+Continuous Audio Representations:
+- WavLM
+- HuBERT
+-  Wav2vec
+
+### Discrete Audio Representations:
+- EnCodec
+-  Discrete Autoencoder Codec (DAC)
+
+### Neural Architectures:
+
+- Feed-forward (XVector)
+- Recurrent Networks (RNN, LSTM, GRU)
+- Transformers(Conformer, Transformer)
+- CRDNN
+
+## Technical Details:
+
+  - Loss function: Negative Log Likelihood
+
+  - Primary task: Keyword Spotting
+
+  - Technology stack: Python, PyTorch, SpeechBrain, Matplotlib
+
+## Results Summary
+
+All models underwent rigorous hyperparameter optimization. We tested multiple neural architectures with RNNs, LSTMs, and Transformers showing particular promise.
+Continuous Features Performance
+
+#### Continuous representations contain fine-grained audio information and performed exceptionally well:
+
+  - Fbanks: Achieved 2% test error rate without overfitting
+
+  - Wav2Vec: Reached 1.67% error rate despite slight overfitting due to fine-tuning on limited data
+
+  - HuBERT: Attained 1.46% test error rate with similar overfitting characteristics
+
+  - WavLM: Best performer at 0.92% error rate with rapid convergence
+
+#### Discrete Features Performance
+
+Discrete tokens offer compact, categorical audio representations:
+
+  - EnCodec: Reached 7.6% test error rate without overfitting, showing promise with sequence-based models
+
+## Conclusion
+
+Continuous feature models deliver superior accuracy (as low as 0.92% error with WavLM) but require more computational resources. Discrete feature models achieve reasonable performance (7.6% error rates) while offering greater efficiency. This represents a clear trade-off between accuracy and computational demands in audio processing systems.
