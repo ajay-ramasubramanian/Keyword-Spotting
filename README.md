@@ -82,6 +82,8 @@ Continuous Features Performance
 Discrete tokens offer compact, categorical audio representations:
 
   - EnCodec: Reached 7.6% test error rate without overfitting, showing promise with sequence-based models
+    ![Untitled](https://github.com/user-attachments/assets/0ef140c0-60a2-4ca0-99d8-c0d5d8bce88e)
+
 
 ## Conclusion
 
